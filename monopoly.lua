@@ -7,6 +7,9 @@ local hotelsBag
 local lastRoll
 local lastMove
 
+local isCommunityFlipped = false
+local isChanceFlipped = false
+
 function onLoad(save_state)
 
 
@@ -1878,6 +1881,28 @@ function buy(theButton, theClicker)
       else
         broadcastToAll(playerData[playerNum].Color.." can't afford $"..tostring(amount).." to pay for income tax.", {1,1,1})
       end
+    elseif currSquare ==2 or currSquare ==17 or currSquare ==33 then
+      --Community Chest
+        if not isCommunityFlipped then
+            isCommunityFlipped = true
+            getObjectFromGUID('ef1c67').flip()
+        else
+            isCommunityFlipped = false
+            getObjectFromGUID('ef1c67').flip()
+            getObjectFromGUID('ef1c67').shuffle()
+        end
+
+    elseif currSquare ==7 or currSquare ==22 then
+      --Chance
+        if not isChanceFlipped then
+            isChanceFlipped = true
+            getObjectFromGUID('15d990').flip()
+        else
+            isChanceFlipped = false
+            getObjectFromGUID('15d990').flip()
+            getObjectFromGUID('15d990').shuffle()
+        end
+
     else
       broadcastToColor("Error: Property not found in bank.", theClicker, {1,1,1})
       return
@@ -2356,6 +2381,10 @@ function retrieveDice()
                             v.ButtonChip.editButton({index = 5, label = "Pay\ntax"})
                         elseif currSquare==4    then
                             v.ButtonChip.editButton({index = 5, label = "Pay\n10%"})
+                        elseif currSquare==2 or currSquare==17 or currSquare==33 then
+                            v.ButtonChip.editButton({index = 5, label = "Draw"})
+                        elseif currSquare==7 or currSquare==22 then
+                            v.ButtonChip.editButton({index = 5, label = "Draw"})
                         elseif currSquare ~= 0 and propertyNameToColor[boardPoints[currSquare][2]] ~= nil then
                             for _, c in pairs(v.WalletZone.getObjects()) do
                                 if  c.getName() == boardPoints[currSquare][2] then
