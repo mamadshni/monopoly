@@ -1738,7 +1738,26 @@ function buy(theButton, theClicker)
   local available = propertyObject ~= nil
   if not available then
     if propertyNameToColor[boardPoints[currSquare][2]] ~= nil then
-        
+
+      for dataId, data in ipairs(playerData) do
+          if theClicker~=data.Color then
+              for _, v in pairs(data.WalletZone.getObjects()) do
+                  if v.getName() == boardPoints[currSquare][2] then
+                      local ownerPos = getSquare(data.Token.getPosition())
+
+                      if ownerPos == 40 then
+                          broadcastToAll(data.Color.." is in jail", {1,1,1})
+                          return
+                      elseif ((v.getRotation()['z']+90)%360) >= 180 then
+                          broadcastToAll("The Card is mortgaged", {1,1,1})
+                          return
+                      end
+                      
+                  end
+              end
+          end
+      end
+
       if propertyNameToColor[boardPoints[currSquare][2]] == "Railroad" then
 
         for dataId, data in ipairs(playerData) do
