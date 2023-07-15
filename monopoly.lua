@@ -614,88 +614,88 @@ local whiteSortPositions = {
     ["100"] = {13.00, 0.5, -40.00},
     ["500"] = {15.00, 0.5, -40.00},
 
-    ["Dark"]  = { 4, 0.5, -44},
-    ["Zeynabie"]         = { 4, 0.5, -47},
+    ["Dark"]                          = { 4, 0.5, -44},
+    ["Zeynabie"]                      = { 4, 0.5, -47},
 
-    ["Kohandej"]       = { 7, 0.5, -44},
-    ["Marchin"]        = { 7, 0.5, -47},
-    ["Joozdan"]    = { 7, 0.5, -50},
+    ["Kohandej"]                      = { 7, 0.5, -44},
+    ["Marchin"]                       = { 7, 0.5, -47},
+    ["Joozdan"]                       = { 7, 0.5, -50},
 
-    ["Tokhchi"]     = {10, 0.5, -44},
-    ["Asgarie"]         = {10, 0.5, -47},
-    ["Kaveh"]       = {10, 0.5, -50},
+    ["Tokhchi"]                       = {10, 0.5, -44},
+    ["Asgarie"]                       = {10, 0.5, -47},
+    ["Kaveh"]                         = {10, 0.5, -50},
 
-    ["Ahmad Abad"]       = {13, 0.5, -44},
-    ["Jeyshir"]      = {13, 0.5, -47},
-    ["Takhti"]       = {13, 0.5, -50},
+    ["Ahmad Abad"]                    = {13, 0.5, -44},
+    ["Jeyshir"]                       = {13, 0.5, -47},
+    ["Takhti"]                        = {13, 0.5, -50},
 
-    ["Hosein Abad"]       = {16, 0.5, -44},
-    ["Vahid"]        = {16, 0.5, -47},
-    ["Sepahan Shahr"]       = {16, 0.5, -50},
+    ["Hosein Abad"]                   = {16, 0.5, -44},
+    ["Vahid"]                         = {16, 0.5, -47},
+    ["Sepahan Shahr"]                 = {16, 0.5, -50},
 
-    ["Hakim Nezami"]       = {19, 0.5, -44},
-    ["Bagh Daryache"]        = {19, 0.5, -47},
-    ["Moshtagh"]        = {19, 0.5, -50},
+    ["Hakim Nezami"]                  = {19, 0.5, -44},
+    ["Bagh Daryache"]                 = {19, 0.5, -47},
+    ["Moshtagh"]                      = {19, 0.5, -50},
 
-    ["Tohid"]        = {22, 0.5, -44},
-    ["Chahar Bagh"] = {22, 0.5, -47},
-    ["Mardavij"]   = {22, 0.5, -50},
+    ["Tohid"]                         = {22, 0.5, -44},
+    ["Chahar Bagh"]                   = {22, 0.5, -47},
+    ["Mardavij"]                      = {22, 0.5, -50},
 
-    ["Abas Abad"]            = {25, 0.5, -44},
-    ["Mehr Abad"]             = {25, 0.5, -47},
+    ["Abas Abad"]                     = {25, 0.5, -44},
+    ["Mehr Abad"]                     = {25, 0.5, -47},
 
 
-    ["Metropol"]          = {28, 0.5, -44},
-    ["Shariati"]            = {31, 0.5, -44},
-    ["Ghods"]      = {28, 0.5, -47},
-    ["Hezar Jirib"] = {31, 0.5, -47},
+    ["Halal Khorie Hajie"]            = {28, 0.5, -44},
+    ["Mey Khane Ashkan"]              = {31, 0.5, -44},
+    ["Amoozesh Gahe Khaste"]          = {28, 0.5, -47},
+    ["Elektriky Dorvash"]             = {31, 0.5, -47},
 
-    ["Niroogah Feshar Jafari"]      = {34, 0.5, -44},
-    ["Mojasame Sazi Malekpour"]           = {34, 0.5, -47},
+    ["Karkhane Feshare Jafari"]       = {34, 0.5, -44},
+    ["Mojasame Sazi Malekpour"]       = {34, 0.5, -47},
 
-    ["Miscellaneous"]         = {20, 0.5, -40},
+    ["Miscellaneous"]                 = {20, 0.5, -40},
 }
 
 local propertyPrices = {
-    ["Dark"] = 60,
-    ["Zeynabie"] = 60,
+    ["Dark"]                     = 60,
+    ["Zeynabie"]                 = 60,
 
-    ["Kohandej"] = 100,
-    ["Marchin"] = 100,
-    ["Joozdan"] = 120,
+    ["Kohandej"]                 = 100,
+    ["Marchin"]                  = 100,
+    ["Joozdan"]                  = 120,
 
-    ["Tokhchi"] = 140,
-    ["Asgarie"] = 140,
-    ["Kaveh"] = 160,
+    ["Tokhchi"]                  = 140,
+    ["Asgarie"]                  = 140,
+    ["Kaveh"]                    = 160,
 
-    ["Ahmad Abad"] = 180,
-    ["Jeyshir"] = 180,
-    ["Takhti"] = 200,
+    ["Ahmad Abad"]               = 180,
+    ["Jeyshir"]                  = 180,
+    ["Takhti"]                   = 200,
 
-    ["Hosein Abad"] = 220,
-    ["Vahid"] = 220,
-    ["Sepahan Shahr"] = 240,
+    ["Hosein Abad"]              = 220,
+    ["Vahid"]                    = 220,
+    ["Sepahan Shahr"]            = 240,
 
-    ["Hakim Nezami"] = 260,
-    ["Bagh Daryache"] = 260,
-    ["Moshtagh"] = 280,
+    ["Hakim Nezami"]             = 260,
+    ["Bagh Daryache"]            = 260,
+    ["Moshtagh"]                 = 280,
 
-    ["Tohid"] = 300,
-    ["Chahar Bagh"] = 300,
-    ["Mardavij"] = 320,
-
-
-    ["Abas Abad"] = 350,
-    ["Mehr Abad"] = 400,
+    ["Tohid"]                    = 300,
+    ["Chahar Bagh"]              = 300,
+    ["Mardavij"]                 = 320,
 
 
-    ["Metropol"] = 200,
-    ["Shariati"] = 200,
-    ["Ghods"] = 200,
-    ["Hezar Jirib"] = 200,
+    ["Abas Abad"]                = 350,
+    ["Mehr Abad"]                = 400,
 
-    ["Niroogah Feshar Jafari"] = 150,
-    ["Mojasame Sazi Malekpour"] = 150,
+
+    ["Halal Khorie Hajie"]       = 200,
+    ["Mey Khane Ashkan"]         = 200,
+    ["Amoozesh Gahe Khaste"]     = 200,
+    ["Elektriky Dorvash"]        = 200,
+
+    ["Karkhane Feshare Jafari"]  = 150,
+    ["Mojasame Sazi Malekpour"]  = 150,
 }
 
 local propertyRentPrices = {
@@ -729,12 +729,12 @@ local propertyRentPrices = {
     ["Abas Abad"]              = {35, 175, 500, 1100, 1300, 1500},
     ["Mehr Abad"]               = {50, 200, 600, 1400, 1700, 2000},
 
-    ["Metropol"]            = {25, 50, 100, 200},
-    ["Shariati"]              = {25, 50, 100, 200},
-    ["Ghods"]        = {25, 50, 100, 200},
-    ["Hezar Jirib"]   = {25, 50, 100, 200},
+    ["Halal Khorie Hajie"]            = {25, 50, 100, 200},
+    ["Mey Khane Ashkan"]              = {25, 50, 100, 200},
+    ["Amoozesh Gahe Khaste"]        = {25, 50, 100, 200},
+    ["Elektriky Dorvash"]   = {25, 50, 100, 200},
 
-    ["Niroogah Feshar Jafari"] = 0, -- 4 or 10 * dice
+    ["Karkhane Feshare Jafari"] = 0, -- 4 or 10 * dice
     ["Mojasame Sazi Malekpour"] = 0,      -- 4 or 10 * dice
 }
 local propertyNameToColor = {
@@ -768,12 +768,12 @@ local propertyNameToColor = {
     ["Abas Abad"]              = "Dark-Blue",
     ["Mehr Abad"]               = "Dark-Blue",
 
-    ["Metropol"]            = "Railroad",
-    ["Shariati"]              = "Railroad",
-    ["Ghods"]        = "Railroad",
-    ["Hezar Jirib"]   = "Railroad",
+    ["Halal Khorie Hajie"]            = "Railroad",
+    ["Mey Khane Ashkan"]              = "Railroad",
+    ["Amoozesh Gahe Khaste"]        = "Railroad",
+    ["Elektriky Dorvash"]   = "Railroad",
 
-    ["Niroogah Feshar Jafari"]        = "Utility",
+    ["Karkhane Feshare Jafari"]        = "Utility",
     ["Mojasame Sazi Malekpour"]             = "Utility"
 }
 
@@ -2461,17 +2461,17 @@ function initializeBoardPoints(save_state)
   boardPoints[02] = {{  8.1, 2.5, -15.4}, 'Community Chest'}
   boardPoints[03] = {{  5.5, 2.5, -15.4}, 'Zeynabie'}
   boardPoints[04] = {{  2.7, 2.5, -14.1}, 'Income Tax: $200'}
-  boardPoints[05] = {{  0  , 2.5, -15.4}, 'Ghods'}
+  boardPoints[05] = {{  0  , 2.5, -15.4}, 'Amoozesh Gahe Khaste'}
   boardPoints[06] = {{ -2.7, 2.5, -15.4}, 'Kohandej'}
   boardPoints[07] = {{ -5.4, 2.5, -15.4}, 'Chance'}
   boardPoints[08] = {{ -8  , 2.5, -15.4}, 'Marchin'}
   boardPoints[09] = {{-10.9, 2.5, -15.4}, 'Joozdan'}
   boardPoints[10] = {{-15.9, 2.5, -15.9}, 'Just Visiting'}
   boardPoints[11] = {{-15.4, 2.5, -10.9}, 'Tokhchi'}
-  boardPoints[12] = {{-15.4, 2.5,  -8.2}, 'Niroogah Feshar Jafari'}
+  boardPoints[12] = {{-15.4, 2.5,  -8.2}, 'Karkhane Feshare Jafari'}
   boardPoints[13] = {{-15.4, 2.5,  -5.5}, 'Asgarie'}
   boardPoints[14] = {{-15.4, 2.5,  -2.7}, 'Kaveh'}
-  boardPoints[15] = {{-15.4, 2.5,   0  }, 'Hezar Jirib'}
+  boardPoints[15] = {{-15.4, 2.5,   0  }, 'Elektriky Dorvash'}
   boardPoints[16] = {{-15.4, 2.5,   2.7}, 'Ahmad Abad'}
   boardPoints[17] = {{-15.4, 2.5,   5.4}, 'Community Chest'}
   boardPoints[18] = {{-15.4, 2.5,   8  }, 'Jeyshir'}
@@ -2481,7 +2481,7 @@ function initializeBoardPoints(save_state)
   boardPoints[22] = {{ -8.1, 2.5,  15.4}, 'Chance'}
   boardPoints[23] = {{ -5.5, 2.5,  15.4}, 'Vahid'}
   boardPoints[24] = {{ -2.7, 2.5,  15.4}, 'Sepahan Shahr'}
-  boardPoints[25] = {{  0  , 2.5,  15.4}, 'Metropol'}
+  boardPoints[25] = {{  0  , 2.5,  15.4}, 'Halal Khorie Hajie'}
   boardPoints[26] = {{  2.7, 2.5,  15.4}, 'Hakim Nezami'}
   boardPoints[27] = {{  5.5, 2.5,  15.4}, 'Bagh Daryache'}
   boardPoints[28] = {{  8  , 2.5,  15.4}, 'Mojasame Sazi Malekpour'}
@@ -2491,7 +2491,7 @@ function initializeBoardPoints(save_state)
   boardPoints[32] = {{ 15.4, 2.5,   8  }, 'Chahar Bagh'}
   boardPoints[33] = {{ 15.4, 2.5,   5.4}, 'Community Chest'}
   boardPoints[34] = {{ 15.4, 2.5,   2.7}, 'Mardavij'}
-  boardPoints[35] = {{ 15.4, 2.5,   0  }, 'Shariati'}
+  boardPoints[35] = {{ 15.4, 2.5,   0  }, 'Mey Khane Ashkan'}
   boardPoints[36] = {{ 15.4, 2.5,  -2.7}, 'Chance'}
   boardPoints[37] = {{ 15.4, 2.5,  -5.5}, 'Abas Abad'}
   boardPoints[38] = {{ 15.4, 2.5,  -8  }, 'Luxury Tax: $100'}
