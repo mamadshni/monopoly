@@ -1745,111 +1745,97 @@ function buy(theButton, theClicker)
                   if v.getName() == boardPoints[currSquare][2] then
                       local ownerPos = getSquare(data.Token.getPosition())
 
+                      -- CardOwner is in jail
                       if ownerPos == 40 then
                           broadcastToAll(data.Color.." is in jail", {1,1,1})
                           return
-                      elseif ((v.getRotation()['z']+90)%360) >= 180 then
+                      end
+
+                      -- CardOwner is mortgaged
+                      if ((v.getRotation()['z']+90)%360) >= 180 then
                           broadcastToAll("The Card is mortgaged", {1,1,1})
                           return
                       end
-                      
+
+
+                      if propertyNameToColor[boardPoints[currSquare][2]] == "Railroad" then
+                          local railroadCount = 0
+                          for i5, property2 in pairs(data.WalletZone.getObjects()) do
+                              if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
+                                  railroadCount = railroadCount + 1
+                              end
+                          end
+                          local amount = 25*math.pow(2, railroadCount-1)
+                          local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
+
+                          if paid then
+                              broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
+                          end
+                          break
+
+                      elseif propertyNameToColor[boardPoints[currSquare][2]] == "Utility" then
+                          if playerData[playerNum].LastMove ~= nil and
+                                  playerData[playerNum].LastMove == playerData[playerNum].Die1.getValue() + playerData[playerNum].Die2.getValue() then
+                              local utilityCount = 0
+                              for i5, property2 in pairs(data.WalletZone.getObjects()) do
+                                  if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
+                                      utilityCount = utilityCount + 1
+                                  end
+                              end
+
+                              local amount = playerData[playerNum].LastMove*(utilityCount*6-2)
+                              local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
+                              if paid then
+                                  broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
+                              end
+                              break
+                          else
+                              broadcastToColor("You can only pay rent on utilities after moving to the space with the \"Move\" command.", theClicker, {1,1,1})
+                          end
+
+                      else
+                          -- player has to pay a rent
+                          for dataId, data in ipairs(playerData) do
+                              if theClicker~=data.Color then
+                                  for _, v in pairs(data.WalletZone.getObjects()) do
+                                      if v.getName() == boardPoints[currSquare][2] and ((v.getRotation()['z']+90)%360)<180 then
+                                          local housesCount = 0
+                                          for i3, house in pairs(getAllObjects()) do
+                                              -- find houses
+                                              if house.getDescription() == "House" and currSquare == getSquare(house.getPosition()) then
+                                                  housesCount = housesCount + 1
+                                              elseif house.getDescription() == "Hotel" and currSquare == getSquare(house.getPosition()) then
+                                                  housesCount = housesCount + 5
+                                              end
+                                          end
+                                          -- trying to double rent
+                                          local multiplier = 1
+                                          local deedCount = 0
+                                          if(housesCount == 0) then
+                                              for i5, property2 in pairs(data.WalletZone.getObjects()) do
+                                                  if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
+                                                      deedCount = deedCount + 1
+                                                  end
+                                              end
+                                              if deedCount == 3 or (propertyNameToColor[v.getName()]=='Brown' or propertyNameToColor[v.getName()]=='Dark-Blue') and deedCount == 2 then multiplier = 2 end
+                                          end
+
+                                          local amount = propertyRentPrices[v.getName()][housesCount+1]*multiplier
+                                          local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
+                                          if paid then
+                                              broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
+                                          end
+                                          break
+                                      end
+                                  end
+                              end
+                          end
+                      end
                   end
               end
           end
       end
 
-      if propertyNameToColor[boardPoints[currSquare][2]] == "Railroad" then
-
-        for dataId, data in ipairs(playerData) do
-          if theClicker~=data.Color then
-            for _, v in pairs(data.WalletZone.getObjects()) do
-              if v.getName() == boardPoints[currSquare][2] and ((v.getRotation()['z']+90)%360)<180 then
-
-                local railroadCount = 0
-                for i5, property2 in pairs(data.WalletZone.getObjects()) do
-                  if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
-                    railroadCount = railroadCount + 1
-                  end
-                end
-                local amount = 25*math.pow(2, railroadCount-1)
-                local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
-
-                if paid then
-                  broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
-                end
-                break
-              end
-            end
-          end
-        end
-
-      elseif propertyNameToColor[boardPoints[currSquare][2]] == "Utility" then
-
-        for dataId, data in ipairs(playerData) do
-          if theClicker~=data.Color then
-            for _, v in pairs(data.WalletZone.getObjects()) do
-              if v.getName() == boardPoints[currSquare][2] and ((v.getRotation()['z']+90)%360)<180 then
-                if playerData[playerNum].LastMove ~= nil and
-                playerData[playerNum].LastMove == playerData[playerNum].Die1.getValue() + playerData[playerNum].Die2.getValue() then
-                  local utilityCount = 0
-                  for i5, property2 in pairs(data.WalletZone.getObjects()) do
-                    if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
-                      utilityCount = utilityCount + 1
-                    end
-                  end
-
-                  local amount = playerData[playerNum].LastMove*(utilityCount*6-2)
-                  local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
-                  if paid then
-                    broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
-                  end
-                  break
-                else
-                  broadcastToColor("You can only pay rent on utilities after moving to the space with the \"Move\" command.", theClicker, {1,1,1})
-                end
-              end
-            end
-          end
-        end
-
-      else
-        -- player has to pay a rent
-        for dataId, data in ipairs(playerData) do
-          if theClicker~=data.Color then
-            for _, v in pairs(data.WalletZone.getObjects()) do
-              if v.getName() == boardPoints[currSquare][2] and ((v.getRotation()['z']+90)%360)<180 then
-                local housesCount = 0
-                for i3, house in pairs(getAllObjects()) do
-                  -- find houses
-                  if house.getDescription() == "House" and currSquare == getSquare(house.getPosition()) then
-                    housesCount = housesCount + 1
-                  elseif house.getDescription() == "Hotel" and currSquare == getSquare(house.getPosition()) then
-                    housesCount = housesCount + 5
-                  end
-                end
-                -- trying to double rent
-                local multiplier = 1
-                local deedCount = 0
-                if(housesCount == 0) then
-                  for i5, property2 in pairs(data.WalletZone.getObjects()) do
-                    if propertyNameToColor[property2.getName()]==propertyNameToColor[v.getName()] then
-                      deedCount = deedCount + 1
-                    end
-                  end
-                  if deedCount == 3 or (propertyNameToColor[v.getName()]=='Brown' or propertyNameToColor[v.getName()]=='Dark-Blue') and deedCount == 2 then multiplier = 2 end
-                end
-
-                local amount = propertyRentPrices[v.getName()][housesCount+1]*multiplier
-                local paid = pay(playerNum, colorToNum[string.lower(data.Color)], amount)
-                if paid then
-                  broadcastToAll(playerData[playerNum].Color.." paid $"..tostring(amount).." to "..data.Color..'.', {1,1,1})
-                end
-                break
-              end
-            end
-          end
-        end
-      end
     elseif currSquare == 40 then
       local paid =  payBank(playerNum, 50)
       if paid then
