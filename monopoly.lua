@@ -1,4 +1,3 @@
-
 local board
 local clock
 local timer
@@ -615,195 +614,195 @@ local whiteSortPositions = {
     ["100"] = {13.00, 0.5, -40.00},
     ["500"] = {15.00, 0.5, -40.00},
 
-    ["Mediterranean Avenue"]  = { 4, 0.5, -44},
-    ["Baltic Avenue"]         = { 4, 0.5, -47},
+    ["Dark"]  = { 4, 0.5, -44},
+    ["Zeynabie"]         = { 4, 0.5, -47},
 
-    ["Oriental Avenue"]       = { 7, 0.5, -44},
-    ["Vermont Avenue"]        = { 7, 0.5, -47},
-    ["Connecticut Avenue"]    = { 7, 0.5, -50},
+    ["Kohandej"]       = { 7, 0.5, -44},
+    ["Marchin"]        = { 7, 0.5, -47},
+    ["Joozdan"]    = { 7, 0.5, -50},
 
-    ["St. Charles Place"]     = {10, 0.5, -44},
-    ["States Avenue"]         = {10, 0.5, -47},
-    ["Virginia Avenue"]       = {10, 0.5, -50},
+    ["Tokhchi"]     = {10, 0.5, -44},
+    ["Asgarie"]         = {10, 0.5, -47},
+    ["Kaveh"]       = {10, 0.5, -50},
 
-    ["St. James Place"]       = {13, 0.5, -44},
-    ["Tennessee Avenue"]      = {13, 0.5, -47},
-    ["New York Avenue"]       = {13, 0.5, -50},
+    ["Ahmad Abad"]       = {13, 0.5, -44},
+    ["Jeyshir"]      = {13, 0.5, -47},
+    ["Takhti"]       = {13, 0.5, -50},
 
-    ["Kentucky Avenue"]       = {16, 0.5, -44},
-    ["Indiana Avenue"]        = {16, 0.5, -47},
-    ["Illinois Avenue"]       = {16, 0.5, -50},
+    ["Hosein Abad"]       = {16, 0.5, -44},
+    ["Vahid"]        = {16, 0.5, -47},
+    ["Sepahan Shahr"]       = {16, 0.5, -50},
 
-    ["Atlantic Avenue"]       = {19, 0.5, -44},
-    ["Ventnor Avenue"]        = {19, 0.5, -47},
-    ["Marvin Gardens"]        = {19, 0.5, -50},
+    ["Hakim Nezami"]       = {19, 0.5, -44},
+    ["Bagh Daryache"]        = {19, 0.5, -47},
+    ["Moshtagh"]        = {19, 0.5, -50},
 
-    ["Pacific Avenue"]        = {22, 0.5, -44},
-    ["North Carolina Avenue"] = {22, 0.5, -47},
-    ["Pennsylvania Avenue"]   = {22, 0.5, -50},
+    ["Tohid"]        = {22, 0.5, -44},
+    ["Chahar Bagh"] = {22, 0.5, -47},
+    ["Mardavij"]   = {22, 0.5, -50},
 
-    ["Park Place"]            = {25, 0.5, -44},
-    ["Boardwalk"]             = {25, 0.5, -47},
+    ["Abas Abad"]            = {25, 0.5, -44},
+    ["Mehr Abad"]             = {25, 0.5, -47},
 
 
-    ["B&O Railroad"]          = {28, 0.5, -44},
-    ["Short Line"]            = {31, 0.5, -44},
-    ["Reading Railroad"]      = {28, 0.5, -47},
-    ["Pennsylvania Railroad"] = {31, 0.5, -47},
+    ["Metropol"]          = {28, 0.5, -44},
+    ["Shariati"]            = {31, 0.5, -44},
+    ["Ghods"]      = {28, 0.5, -47},
+    ["Hezar Jirib"] = {31, 0.5, -47},
 
-    ["Electric Company"]      = {34, 0.5, -44},
-    ["Water Works"]           = {34, 0.5, -47},
+    ["Niroogah Feshar Jafari"]      = {34, 0.5, -44},
+    ["Mojasame Sazi Malekpour"]           = {34, 0.5, -47},
 
     ["Miscellaneous"]         = {20, 0.5, -40},
 }
 
 local propertyPrices = {
-    ["Mediterranean Avenue"] = 60,
-    ["Baltic Avenue"] = 60,
+    ["Dark"] = 60,
+    ["Zeynabie"] = 60,
 
-    ["Oriental Avenue"] = 100,
-    ["Vermont Avenue"] = 100,
-    ["Connecticut Avenue"] = 120,
+    ["Kohandej"] = 100,
+    ["Marchin"] = 100,
+    ["Joozdan"] = 120,
 
-    ["St. Charles Place"] = 140,
-    ["States Avenue"] = 140,
-    ["Virginia Avenue"] = 160,
+    ["Tokhchi"] = 140,
+    ["Asgarie"] = 140,
+    ["Kaveh"] = 160,
 
-    ["St. James Place"] = 180,
-    ["Tennessee Avenue"] = 180,
-    ["New York Avenue"] = 200,
+    ["Ahmad Abad"] = 180,
+    ["Jeyshir"] = 180,
+    ["Takhti"] = 200,
 
-    ["Kentucky Avenue"] = 220,
-    ["Indiana Avenue"] = 220,
-    ["Illinois Avenue"] = 240,
+    ["Hosein Abad"] = 220,
+    ["Vahid"] = 220,
+    ["Sepahan Shahr"] = 240,
 
-    ["Atlantic Avenue"] = 260,
-    ["Ventnor Avenue"] = 260,
-    ["Marvin Gardens"] = 280,
+    ["Hakim Nezami"] = 260,
+    ["Bagh Daryache"] = 260,
+    ["Moshtagh"] = 280,
 
-    ["Pacific Avenue"] = 300,
-    ["North Carolina Avenue"] = 300,
-    ["Pennsylvania Avenue"] = 320,
-
-
-    ["Park Place"] = 350,
-    ["Boardwalk"] = 400,
+    ["Tohid"] = 300,
+    ["Chahar Bagh"] = 300,
+    ["Mardavij"] = 320,
 
 
-    ["B&O Railroad"] = 200,
-    ["Short Line"] = 200,
-    ["Reading Railroad"] = 200,
-    ["Pennsylvania Railroad"] = 200,
+    ["Abas Abad"] = 350,
+    ["Mehr Abad"] = 400,
 
-    ["Electric Company"] = 150,
-    ["Water Works"] = 150,
+
+    ["Metropol"] = 200,
+    ["Shariati"] = 200,
+    ["Ghods"] = 200,
+    ["Hezar Jirib"] = 200,
+
+    ["Niroogah Feshar Jafari"] = 150,
+    ["Mojasame Sazi Malekpour"] = 150,
 }
 
 local propertyRentPrices = {
-    ["Mediterranean Avenue"]    = { 2,  10,  30,   90,  160,  250},
-    ["Baltic Avenue"]           = { 4,  20,  60,  180,  320,  450},
+    ["Dark"]    = { 2,  10,  30,   90,  160,  250},
+    ["Zeynabie"]           = { 4,  20,  60,  180,  320,  450},
 
-    ["Oriental Avenue"]         = { 6,  30,  90,  270,  400,  550},
-    ["Vermont Avenue"]          = { 6,  30,  90,  270,  400,  550},
-    ["Connecticut Avenue"]      = { 8,  40, 100,  300,  450,  600},
+    ["Kohandej"]         = { 6,  30,  90,  270,  400,  550},
+    ["Marchin"]          = { 6,  30,  90,  270,  400,  550},
+    ["Joozdan"]      = { 8,  40, 100,  300,  450,  600},
 
-    ["St. Charles Place"]       = {10,  50, 150,  450,  625,  750},
-    ["States Avenue"]           = {10,  50, 150,  450,  625,  750},
-    ["Virginia Avenue"]         = {12,  60, 180,  500,  700,  900},
+    ["Tokhchi"]       = {10,  50, 150,  450,  625,  750},
+    ["Asgarie"]           = {10,  50, 150,  450,  625,  750},
+    ["Kaveh"]         = {12,  60, 180,  500,  700,  900},
 
-    ["St. James Place"]         = {14,  70, 200,  550,  750,  950},
-    ["Tennessee Avenue"]        = {14,  70, 200,  550,  750,  950},
-    ["New York Avenue"]         = {16,  80, 220,  600,  800, 1000},
+    ["Ahmad Abad"]         = {14,  70, 200,  550,  750,  950},
+    ["Jeyshir"]        = {14,  70, 200,  550,  750,  950},
+    ["Takhti"]         = {16,  80, 220,  600,  800, 1000},
 
-    ["Kentucky Avenue"]         = {18,  90, 250,  700,  875, 1050},
-    ["Indiana Avenue"]          = {18,  90, 250,  700,  875, 1050},
-    ["Illinois Avenue"]         = {20, 100, 300,  750,  925, 1100},
+    ["Hosein Abad"]         = {18,  90, 250,  700,  875, 1050},
+    ["Vahid"]          = {18,  90, 250,  700,  875, 1050},
+    ["Sepahan Shahr"]         = {20, 100, 300,  750,  925, 1100},
 
-    ["Atlantic Avenue"]         = {22, 110, 330,  800,  975, 1150},
-    ["Ventnor Avenue"]          = {22, 110, 330,  800,  975, 1150},
-    ["Marvin Gardens"]          = {24, 120, 360,  850, 1025, 1200},
+    ["Hakim Nezami"]         = {22, 110, 330,  800,  975, 1150},
+    ["Bagh Daryache"]          = {22, 110, 330,  800,  975, 1150},
+    ["Moshtagh"]          = {24, 120, 360,  850, 1025, 1200},
 
-    ["Pacific Avenue"]          = {26, 130, 390,  900, 1100, 1275},
-    ["North Carolina Avenue"]   = {26, 130, 390,  900, 1100, 1275},
-    ["Pennsylvania Avenue"]     = {28, 150, 450, 1000, 1200, 1400},
+    ["Tohid"]          = {26, 130, 390,  900, 1100, 1275},
+    ["Chahar Bagh"]   = {26, 130, 390,  900, 1100, 1275},
+    ["Mardavij"]     = {28, 150, 450, 1000, 1200, 1400},
 
-    ["Park Place"]              = {35, 175, 500, 1100, 1300, 1500},
-    ["Boardwalk"]               = {50, 200, 600, 1400, 1700, 2000},
+    ["Abas Abad"]              = {35, 175, 500, 1100, 1300, 1500},
+    ["Mehr Abad"]               = {50, 200, 600, 1400, 1700, 2000},
 
-    ["B&O Railroad"]            = {25, 50, 100, 200},
-    ["Short Line"]              = {25, 50, 100, 200},
-    ["Reading Railroad"]        = {25, 50, 100, 200},
-    ["Pennsylvania Railroad"]   = {25, 50, 100, 200},
+    ["Metropol"]            = {25, 50, 100, 200},
+    ["Shariati"]              = {25, 50, 100, 200},
+    ["Ghods"]        = {25, 50, 100, 200},
+    ["Hezar Jirib"]   = {25, 50, 100, 200},
 
-    ["Electric Company"] = 0, -- 4 or 10 * dice
-    ["Water Works"] = 0,      -- 4 or 10 * dice
+    ["Niroogah Feshar Jafari"] = 0, -- 4 or 10 * dice
+    ["Mojasame Sazi Malekpour"] = 0,      -- 4 or 10 * dice
 }
 local propertyNameToColor = {
-    ["Mediterranean Avenue"]    = "Brown",
-    ["Baltic Avenue"]           = "Brown",
+    ["Dark"]    = "Brown",
+    ["Zeynabie"]           = "Brown",
 
-    ["Oriental Avenue"]         = "White-Blue",
-    ["Vermont Avenue"]          = "White-Blue",
-    ["Connecticut Avenue"]      = "White-Blue",
+    ["Kohandej"]         = "White-Blue",
+    ["Marchin"]          = "White-Blue",
+    ["Joozdan"]      = "White-Blue",
 
-    ["St. Charles Place"]       = "Pink",
-    ["States Avenue"]           = "Pink",
-    ["Virginia Avenue"]         = "Pink",
+    ["Tokhchi"]       = "Pink",
+    ["Asgarie"]           = "Pink",
+    ["Kaveh"]         = "Pink",
 
-    ["St. James Place"]         = "Orange",
-    ["Tennessee Avenue"]        = "Orange",
-    ["New York Avenue"]         = "Orange",
+    ["Ahmad Abad"]         = "Orange",
+    ["Jeyshir"]        = "Orange",
+    ["Takhti"]         = "Orange",
 
-    ["Kentucky Avenue"]         = "Red",
-    ["Indiana Avenue"]          = "Red",
-    ["Illinois Avenue"]         = "Red",
+    ["Hosein Abad"]         = "Red",
+    ["Vahid"]          = "Red",
+    ["Sepahan Shahr"]         = "Red",
 
-    ["Atlantic Avenue"]         = "Yellow",
-    ["Ventnor Avenue"]          = "Yellow",
-    ["Marvin Gardens"]          = "Yellow",
+    ["Hakim Nezami"]         = "Yellow",
+    ["Bagh Daryache"]          = "Yellow",
+    ["Moshtagh"]          = "Yellow",
 
-    ["Pacific Avenue"]          = "Green",
-    ["North Carolina Avenue"]   = "Green",
-    ["Pennsylvania Avenue"]     = "Green",
+    ["Tohid"]          = "Green",
+    ["Chahar Bagh"]   = "Green",
+    ["Mardavij"]     = "Green",
 
-    ["Park Place"]              = "Dark-Blue",
-    ["Boardwalk"]               = "Dark-Blue",
+    ["Abas Abad"]              = "Dark-Blue",
+    ["Mehr Abad"]               = "Dark-Blue",
 
-    ["B&O Railroad"]            = "Railroad",
-    ["Short Line"]              = "Railroad",
-    ["Reading Railroad"]        = "Railroad",
-    ["Pennsylvania Railroad"]   = "Railroad",
+    ["Metropol"]            = "Railroad",
+    ["Shariati"]              = "Railroad",
+    ["Ghods"]        = "Railroad",
+    ["Hezar Jirib"]   = "Railroad",
 
-    ["Electric Company"]        = "Utility",
-    ["Water Works"]             = "Utility"
+    ["Niroogah Feshar Jafari"]        = "Utility",
+    ["Mojasame Sazi Malekpour"]             = "Utility"
 }
 
 local housePrice = {
-    ["Mediterranean Avenue"]    = 50,
-    ["Baltic Avenue"]           = 50,
-    ["Oriental Avenue"]         = 50,
-    ["Vermont Avenue"]          = 50,
-    ["Connecticut Avenue"]      = 50,
+    ["Dark"]    = 50,
+    ["Zeynabie"]           = 50,
+    ["Kohandej"]         = 50,
+    ["Marchin"]          = 50,
+    ["Joozdan"]      = 50,
 
-    ["St. Charles Place"]       = 100,
-    ["States Avenue"]           = 100,
-    ["Virginia Avenue"]         = 100,
-    ["St. James Place"]         = 100,
-    ["Tennessee Avenue"]        = 100,
-    ["New York Avenue"]         = 100,
+    ["Tokhchi"]       = 100,
+    ["Asgarie"]           = 100,
+    ["Kaveh"]         = 100,
+    ["Ahmad Abad"]         = 100,
+    ["Jeyshir"]        = 100,
+    ["Takhti"]         = 100,
 
-    ["Kentucky Avenue"]         = 150,
-    ["Indiana Avenue"]          = 150,
-    ["Illinois Avenue"]         = 150,
-    ["Atlantic Avenue"]         = 150,
-    ["Ventnor Avenue"]          = 150,
-    ["Marvin Gardens"]          = 150,
+    ["Hosein Abad"]         = 150,
+    ["Vahid"]          = 150,
+    ["Sepahan Shahr"]         = 150,
+    ["Hakim Nezami"]         = 150,
+    ["Bagh Daryache"]          = 150,
+    ["Moshtagh"]          = 150,
 
-    ["Pacific Avenue"]          = 200,
-    ["North Carolina Avenue"]   = 200,
-    ["Pennsylvania Avenue"]     = 200,
-    ["Park Place"]              = 200,
-    ["Boardwalk"]               = 200
+    ["Tohid"]          = 200,
+    ["Chahar Bagh"]   = 200,
+    ["Mardavij"]     = 200,
+    ["Abas Abad"]              = 200,
+    ["Mehr Abad"]               = 200
 }
 
 playerData = {nil}
@@ -1889,6 +1888,7 @@ function buy(theButton, theClicker)
     local success = payBank(playerNum, amount)
     if success then
         takeDeed(propertyObject, currSquare, playerNum)
+        broadcastToAll(playerData[playerNum].Color.." bought "..propertyObject.getName(), {1,1,1})
     end
   end
 end
@@ -2450,45 +2450,45 @@ end
 
 boardPoints = {nil}
 function initializeBoardPoints(save_state)
-  boardPoints[01] = {{ 10.8, 2.5, -15.4}, 'Mediterranean Avenue'}
+  boardPoints[01] = {{ 10.8, 2.5, -15.4}, 'Dark'}
   boardPoints[02] = {{  8.1, 2.5, -15.4}, 'Community Chest'}
-  boardPoints[03] = {{  5.5, 2.5, -15.4}, 'Baltic Avenue'}
+  boardPoints[03] = {{  5.5, 2.5, -15.4}, 'Zeynabie'}
   boardPoints[04] = {{  2.7, 2.5, -14.1}, 'Income Tax: $200'}
-  boardPoints[05] = {{  0  , 2.5, -15.4}, 'Reading Railroad'}
-  boardPoints[06] = {{ -2.7, 2.5, -15.4}, 'Oriental Avenue'}
+  boardPoints[05] = {{  0  , 2.5, -15.4}, 'Ghods'}
+  boardPoints[06] = {{ -2.7, 2.5, -15.4}, 'Kohandej'}
   boardPoints[07] = {{ -5.4, 2.5, -15.4}, 'Chance'}
-  boardPoints[08] = {{ -8  , 2.5, -15.4}, 'Vermont Avenue'}
-  boardPoints[09] = {{-10.9, 2.5, -15.4}, 'Connecticut Avenue'}
+  boardPoints[08] = {{ -8  , 2.5, -15.4}, 'Marchin'}
+  boardPoints[09] = {{-10.9, 2.5, -15.4}, 'Joozdan'}
   boardPoints[10] = {{-15.9, 2.5, -15.9}, 'Just Visiting'}
-  boardPoints[11] = {{-15.4, 2.5, -10.9}, 'St. Charles Place'}
-  boardPoints[12] = {{-15.4, 2.5,  -8.2}, 'Electric Company'}
-  boardPoints[13] = {{-15.4, 2.5,  -5.5}, 'States Avenue'}
-  boardPoints[14] = {{-15.4, 2.5,  -2.7}, 'Virginia Avenue'}
-  boardPoints[15] = {{-15.4, 2.5,   0  }, 'Pennsylvania Railroad'}
-  boardPoints[16] = {{-15.4, 2.5,   2.7}, 'St. James Place'}
+  boardPoints[11] = {{-15.4, 2.5, -10.9}, 'Tokhchi'}
+  boardPoints[12] = {{-15.4, 2.5,  -8.2}, 'Niroogah Feshar Jafari'}
+  boardPoints[13] = {{-15.4, 2.5,  -5.5}, 'Asgarie'}
+  boardPoints[14] = {{-15.4, 2.5,  -2.7}, 'Kaveh'}
+  boardPoints[15] = {{-15.4, 2.5,   0  }, 'Hezar Jirib'}
+  boardPoints[16] = {{-15.4, 2.5,   2.7}, 'Ahmad Abad'}
   boardPoints[17] = {{-15.4, 2.5,   5.4}, 'Community Chest'}
-  boardPoints[18] = {{-15.4, 2.5,   8  }, 'Tennessee Avenue'}
-  boardPoints[19] = {{-15.4, 2.5,  10.9}, 'New York Avenue'}
+  boardPoints[18] = {{-15.4, 2.5,   8  }, 'Jeyshir'}
+  boardPoints[19] = {{-15.4, 2.5,  10.9}, 'Takhti'}
   boardPoints[20] = {{-14.5, 2.5,  14.5}, 'Free Parking'}
-  boardPoints[21] = {{-10.9, 2.5,  15.4}, 'Kentucky Avenue'}
+  boardPoints[21] = {{-10.9, 2.5,  15.4}, 'Hosein Abad'}
   boardPoints[22] = {{ -8.1, 2.5,  15.4}, 'Chance'}
-  boardPoints[23] = {{ -5.5, 2.5,  15.4}, 'Indiana Avenue'}
-  boardPoints[24] = {{ -2.7, 2.5,  15.4}, 'Illinois Avenue'}
-  boardPoints[25] = {{  0  , 2.5,  15.4}, 'B&O Railroad'}
-  boardPoints[26] = {{  2.7, 2.5,  15.4}, 'Atlantic Avenue'}
-  boardPoints[27] = {{  5.5, 2.5,  15.4}, 'Ventnor Avenue'}
-  boardPoints[28] = {{  8  , 2.5,  15.4}, 'Water Works'}
-  boardPoints[29] = {{ 10.9, 2.5,  15.4}, 'Marvin Gardens'}
+  boardPoints[23] = {{ -5.5, 2.5,  15.4}, 'Vahid'}
+  boardPoints[24] = {{ -2.7, 2.5,  15.4}, 'Sepahan Shahr'}
+  boardPoints[25] = {{  0  , 2.5,  15.4}, 'Metropol'}
+  boardPoints[26] = {{  2.7, 2.5,  15.4}, 'Hakim Nezami'}
+  boardPoints[27] = {{  5.5, 2.5,  15.4}, 'Bagh Daryache'}
+  boardPoints[28] = {{  8  , 2.5,  15.4}, 'Mojasame Sazi Malekpour'}
+  boardPoints[29] = {{ 10.9, 2.5,  15.4}, 'Moshtagh'}
   boardPoints[30] = {{ 14.5, 2.5,  14.5}, 'Go To Jail'}
-  boardPoints[31] = {{ 15.4, 2.5,  10.9}, 'Pacific Avenue'}
-  boardPoints[32] = {{ 15.4, 2.5,   8  }, 'North Carolina Avenue'}
+  boardPoints[31] = {{ 15.4, 2.5,  10.9}, 'Tohid'}
+  boardPoints[32] = {{ 15.4, 2.5,   8  }, 'Chahar Bagh'}
   boardPoints[33] = {{ 15.4, 2.5,   5.4}, 'Community Chest'}
-  boardPoints[34] = {{ 15.4, 2.5,   2.7}, 'Pennsylvania Avenue'}
-  boardPoints[35] = {{ 15.4, 2.5,   0  }, 'Short Line'}
+  boardPoints[34] = {{ 15.4, 2.5,   2.7}, 'Mardavij'}
+  boardPoints[35] = {{ 15.4, 2.5,   0  }, 'Shariati'}
   boardPoints[36] = {{ 15.4, 2.5,  -2.7}, 'Chance'}
-  boardPoints[37] = {{ 15.4, 2.5,  -5.5}, 'Park Place'}
+  boardPoints[37] = {{ 15.4, 2.5,  -5.5}, 'Abas Abad'}
   boardPoints[38] = {{ 15.4, 2.5,  -8  }, 'Luxury Tax: $100'}
-  boardPoints[39] = {{ 15.4, 2.5, -10.9}, 'Boardwalk'}
+  boardPoints[39] = {{ 15.4, 2.5, -10.9}, 'Mehr Abad'}
   boardPoints[40] = {{-13.8, 2.5, -13.8}, 'Jail'}
 end
 
