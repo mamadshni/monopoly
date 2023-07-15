@@ -2357,7 +2357,14 @@ function retrieveDice()
                         elseif currSquare==4    then
                             v.ButtonChip.editButton({index = 5, label = "Pay\n10%"})
                         elseif currSquare ~= 0 and propertyNameToColor[boardPoints[currSquare][2]] ~= nil then
-                            v.ButtonChip.editButton({index = 5, label = "Pay\nrent"})
+                            for _, c in pairs(v.WalletZone.getObjects()) do
+                                if  c.getName() == boardPoints[currSquare][2] then
+                                    v.ButtonChip.editButton({index = 5, label = "Own"})
+                                    break;
+                                else
+                                    v.ButtonChip.editButton({index = 5, label = "Pay\nrent"})
+                                end
+                            end
                         else
                             v.ButtonChip.editButton({index = 5, label = "Buy"})
                         end
