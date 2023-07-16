@@ -9443,7 +9443,7 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomImage": {
-        "ImageURL": "http://cloud-3.steamusercontent.com/ugc/785246402350117379/421C4C272990050B6A155A68F9E0626E090D2894/",
+        "ImageURL": "https://raw.githubusercontent.com/mamadshni/monopoly/main/assets/MonopolyBoard.png",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
         "WidthScale": 1.0
