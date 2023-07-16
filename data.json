@@ -1,9 +1,9 @@
 {
-  "SaveName": "Monopoly (Scripted)",
+  "SaveName": "Isfehan Monopoly",
   "EpochTime": 1689431136,
   "Date": "7/15/2023 4:25:36 PM",
   "VersionNumber": "v13.2.2",
-  "GameMode": "Monopoly (Scripted)",
+  "GameMode": "Isfehan Monopoly",
   "GameType": "",
   "GameComplexity": "",
   "Tags": [],
@@ -1088,7 +1088,7 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomImage": {
-        "ImageURL": "https://www.meme-arsenal.com/memes/0c81455a6cd3690b12febc325aef3e85.jpg",
+        "ImageURL": "https://raw.githubusercontent.com/mamadshni/monopoly/main/assets/MonopolyBoard.png",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
         "WidthScale": 1.0
@@ -14487,7 +14487,7 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomImage": {
-        "ImageURL": "https://www.meme-arsenal.com/memes/0c81455a6cd3690b12febc325aef3e85.jpg",
+        "ImageURL": "https://raw.githubusercontent.com/mamadshni/monopoly/main/assets/MonopolyBoard.png",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
         "WidthScale": 1.0

@@ -1,6 +1,5 @@
 local board
 local clock
-local timer
 local housesBag
 local hotelsBag
 
@@ -35,7 +34,6 @@ function onLoad(save_state)
   clock = getObjectFromGUID('d33f7e')
   clock.Clock.startStopwatch()
   clock.interactable = false
-  timer = getObjectFromGUID('3765ea')
 
   housesBag = getObjectFromGUID('834836')
   hotelsBag = getObjectFromGUID('505113')
